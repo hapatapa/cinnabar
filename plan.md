@@ -882,8 +882,9 @@ launches. Native Windows startup, update and crash-restart acceptance remains in
   option menus, profiles and option files, evaluates custom uniforms and translates programs
   to validated naga modules, with calls ordered after forward declarations and generated
   helpers. Compatibility rewriting accepts empty top-level declarations, defers square roots
-  of negative float literals and separates shared-memory array declarations. Missing vertex
-  varying locations receive zero outputs. Compiler results carry shader modules without
+  of negative float literals, separates shared-memory array declarations, sizes unsized
+  arrays from their constructors and inlines function-local constants in array sizes. Missing
+  vertex varying locations receive zero outputs. Compiler results carry shader modules without
   duplicate validation data; the host revalidates them when decoding.
   The render host runs Iris's frame (shadow, gbuffers for terrain, actors, block
   entities and the hand, deferred, composite and final passes, compute, custom textures and
