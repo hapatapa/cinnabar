@@ -168,15 +168,16 @@ wit-component = "=0.247.0"
 # plus naga GLSL frontend fixes for Java shader packs: constant `?:` and indexing,
 # missing returns, scalar swizzles, atomics and barriers, SPIR-V `fma` NoContraction.
 # A lost device is a `PollError` instead of a poll panic, and queue-write staging OOM is recoverable.
+# FXC (DX12) gets `[loop]` on loops with implicit-derivative operations instead of failing to unroll them.
 # Every wgpu crate comes from the same rev so wgpu and the shaderpack crate share one naga.
 [patch.crates-io]
-naga = { git = "https://github.com/cinnabar-mc/wgpu", rev = "7aebea311d51d3ec0faf5ec161e48cc00096e99e" }
-wgpu = { git = "https://github.com/cinnabar-mc/wgpu", rev = "7aebea311d51d3ec0faf5ec161e48cc00096e99e" }
-wgpu-core = { git = "https://github.com/cinnabar-mc/wgpu", rev = "7aebea311d51d3ec0faf5ec161e48cc00096e99e" }
-wgpu-hal = { git = "https://github.com/cinnabar-mc/wgpu", rev = "7aebea311d51d3ec0faf5ec161e48cc00096e99e" }
-wgpu-types = { git = "https://github.com/cinnabar-mc/wgpu", rev = "7aebea311d51d3ec0faf5ec161e48cc00096e99e" }
+naga = { git = "https://github.com/cinnabar-mc/wgpu", rev = "f42476bf4e780ccd7c0aa5db4f82930beed5b494" }
+wgpu = { git = "https://github.com/cinnabar-mc/wgpu", rev = "f42476bf4e780ccd7c0aa5db4f82930beed5b494" }
+wgpu-core = { git = "https://github.com/cinnabar-mc/wgpu", rev = "f42476bf4e780ccd7c0aa5db4f82930beed5b494" }
+wgpu-hal = { git = "https://github.com/cinnabar-mc/wgpu", rev = "f42476bf4e780ccd7c0aa5db4f82930beed5b494" }
+wgpu-types = { git = "https://github.com/cinnabar-mc/wgpu", rev = "f42476bf4e780ccd7c0aa5db4f82930beed5b494" }
 
-wgpu-naga-bridge = { git = "https://github.com/cinnabar-mc/wgpu", rev = "7aebea311d51d3ec0faf5ec161e48cc00096e99e" }
+wgpu-naga-bridge = { git = "https://github.com/cinnabar-mc/wgpu", rev = "f42476bf4e780ccd7c0aa5db4f82930beed5b494" }
 
 # Iris conditions allow float option values and conditional expressions.
 pp-rs = { git = "https://github.com/cinnabar-mc/glslpp-rs", rev = "2032a88999c95c6ca0b397758dc97930089a6608" }
